@@ -1,0 +1,11 @@
+@mixin respond-to($media) {
+  @if $media == mobile {
+    @media only screen and (max-width: 375px) {
+      @content;
+    }
+  } @else if $media == tablets {
+    @media only screen and (max-width: 1024px) {
+      @content;
+    }
+  }
+}
